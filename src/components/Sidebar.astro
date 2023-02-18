@@ -1,0 +1,29 @@
+---
+import type { NavItem } from "~/types";
+const navItems: Array<NavItem> = [
+  { title: "Places", url: "places" },
+  { title: "Games", url: "games" },
+  { title: "Places", url: "places" },
+  { title: "Games", url: "games" },
+  { title: "Places", url: "places" },
+  { title: "Games", url: "games" },
+  { title: "Places", url: "places" },
+  { title: "Games", url: "games" },
+];
+---
+
+
+<aside class="sidebar">
+    
+
+    <ul>
+        {
+          navItems.map(({ title, url }) => (
+            <li>
+              <a href={"/" + url}>{title}</a>
+            </li>
+          ))
+        }
+      </ul>
+
+</aside>

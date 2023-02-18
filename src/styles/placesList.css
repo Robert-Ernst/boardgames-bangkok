@@ -1,0 +1,61 @@
+#placesListContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.placesListElement {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 100px;
+}
+
+.placesListLogo {
+    overflow: hidden;
+    flex-grow: 0;
+    flex-basis: 20%;
+    height: auto;
+}
+
+.placesListTitle {
+    flex-grow: 1;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.placesListTitle:visited {
+    color: black;
+}
+
+@media (min-width: 500px) {
+
+    .placesListElement {
+        border-color: gray;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgb(0, 0, 0, 0.2);
+        width: 500px;
+    }
+
+    
+    .placesListElement:hover {
+        border-color: gray;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgb(0, 0, 0, 0.2);
+        width: 500px;
+    }
+
+    .placesListElement:active {
+        border-color: gray;
+        border-radius: 20px;
+        box-shadow: 0 1px 3px rgb(0, 0, 0, 0.2);
+        width: 500px;
+    }
+
+
+}

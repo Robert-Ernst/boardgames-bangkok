@@ -1,0 +1,43 @@
+[
+
+    {
+        "name": "The Stronghold SIAM",
+        "street": "Siam Square 9 Alley, ปทุมวัน, Pathum Wan, Bangkok 10330, Thailand",
+        "openingtimes": {
+          "monday": { "open": "12:00", "close": "23:00" },
+          "tuesday": { "open": "12:00", "close": "23:00" },
+          "wednesday": { "open": "12:00", "close": "23:00" },
+          "thursday": { "open": "12:00", "close": "23:00" },
+          "friday": { "open": "12:00", "close": "23:00" },
+          "saturday": { "open": "12:00", "close": "23:00" },
+          "sunday": { "open": "12:00", "close": "23:00" }
+        },
+        "phone": "+49610183228",
+        "links": {
+          "gmapsLink": "https://goo.gl/maps/VUAoGznZ4y1ueqnZA",
+          "facebookLink": "https://www.facebook.com/Strongholdbg/",
+          "instagramLink": "https://www.instagram.com/thestronghold.bg"
+        },
+        "logoLink": "stronghold_logo.jpg"
+    },
+    {
+        "name": "Quest Board Game Café",
+        "street": "M7 444 อาคาร MBK Center ชั้น 7 ห้องเลขที่ 1 Phaya Thai Rd, Wang Mai, Pathum Wan, Bangkok 10330, Thailand",
+        "openingtimes": {
+          "monday": { "open": "11:30", "close": "21:00" },
+          "tuesday": { "open": "11:30", "close": "21:00" },
+          "wednesday": { "open": "11:30", "close": "21:00" },
+          "thursday": { "open": "11:30", "close": "21:00" },
+          "friday": { "open": "11:30", "close": "21:00" },
+          "saturday": { "open": "11:30", "close": "21:00" },
+          "sunday": { "open": "11:30", "close": "21:00" }
+        },
+        "phone": "+49819875596",
+        "links": {
+          "gmapsLink": "https://goo.gl/maps/3owMRAbbtsTUcoZ39",
+          "facebookLink": "https://www.facebook.com/QuestBoardgame"
+        },
+        "logoLink": "quest_logo.jpg"
+    }
+
+]

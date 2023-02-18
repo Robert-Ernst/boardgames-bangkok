@@ -1,0 +1,73 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import places from "../../data/places.json";
+import "~/styles/placesElement.css";
+
+export async function getStaticPaths() {
+  let returnArray: any = [];
+
+  places.forEach((element) => {
+    returnArray.push({ params: { name: element.name } });
+  });
+
+  return returnArray;
+}
+
+const { name } = Astro.params;
+let testLocation = places.find((place) => place.name == name);
+---
+
+<SiteLayout title="Home Page" description="This is the homepage">
+  <div id="placesElementContainer">
+    <h1 class="namePlaces">{testLocation.name}</h1>
+    <div class="streetPlaces">{testLocation.street}</div>
+    <details class="openingtimesPlaces">
+      <summary>Opening times</summary>
+      <span>
+        <ul>
+          <li>
+            <td>Monday</td>
+            <td>{testLocation.openingtimes.monday.open}</td>
+            <td>{testLocation.openingtimes.monday.close}</td>
+          </li>
+          <li>
+            <td>Tuesday</td>
+            <td>{testLocation.openingtimes.tuesday.open}</td>
+            <td>{testLocation.openingtimes.tuesday.close}</td>
+          </li>
+          <li>
+            <td>Wednesday</td>
+            <td>{testLocation.openingtimes.wednesday.open}</td>
+            <td>{testLocation.openingtimes.wednesday.close}</td>
+          </li>
+          <li>
+            <td>Thursday</td>
+            <td>{testLocation.openingtimes.thursday.open}</td>
+            <td>{testLocation.openingtimes.thursday.close}</td>
+          </li>
+          <li>
+            <td>Friday</td>
+            <td>{testLocation.openingtimes.friday.open}</td>
+            <td>{testLocation.openingtimes.friday.close}</td>
+          </li>
+          <li>
+            <td>Saturday</td>
+            <td>{testLocation.openingtimes.saturday.open}</td>
+            <td>{testLocation.openingtimes.saturday.close}</td>
+          </li>
+          <li>
+            <td>Sunday</td>
+            <td>{testLocation.openingtimes.sunday.open}</td>
+            <td>{testLocation.openingtimes.sunday.close}</td>
+          </li>
+        </ul>
+      </span>
+    </details>
+    <div class="phonePlaces">{testLocation.phone}</div>
+    <div class="linkListPlaces">
+      <a href={testLocation.links.gmapsLink}>Google Maps</a>
+      <a href={testLocation.links.facebookLink}>Facebook</a>
+      <a href={testLocation.links.instagramLink}>Instagram</a>
+    </div>
+  </div>
+</SiteLayout>

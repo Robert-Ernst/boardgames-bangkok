@@ -1,0 +1,33 @@
+---
+import type { NavItem } from "~/types";
+import logo from '/pawn_logo.svg'; 
+
+const navItems: Array<NavItem> = [
+  { title: "Places", url: "places" },
+  { title: "Games", url: "games" },
+  { title: "Groups", url: "groups" },
+  { title: "Player", url: "player" },
+];
+---
+
+<nav class="navbar">
+  <img
+    class="menu-logo-symbol tw-max-w-[64px] md:tw-max-w-none"
+    src={logo}
+    alt="Boardgames Thailand Logo"
+    width="80"
+    height="38"
+  />
+
+  <div class="filler"></div>
+
+  <ul>
+    {
+      navItems.map(({ title, url }) => (
+        <li>
+          <a href={"/" + url}>{title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

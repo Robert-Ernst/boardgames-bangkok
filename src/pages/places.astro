@@ -1,0 +1,23 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import places from "../data/places.json";
+import "~/styles/placesList.css";
+---
+
+<SiteLayout
+  title="Places"
+  description="Listings of all boardgame cafes in Bangkok"
+>
+
+<div id="placesListContainer">
+  {
+    places.map((place) => (
+      <div class="placesListElement">
+        <img src={"/images/places/" + place.logoLink} class="placesListLogo">
+        <a class="placesListTitle" href={"places/" + place.name}>{place.name}</a>
+      </div>
+    ))
+  }
+
+  </div>
+</SiteLayout>
